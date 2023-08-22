@@ -1,0 +1,13 @@
+const fs=require("fs");
+// fs.mkdirSync("thapa");
+// fs.writeFileSync("thapa/bio.txt","My name is shruti Agarwal\n");
+// fs.appendFileSync("bio.txt","i have Completed my study");
+// const my_data=fs.readFileSync("bio.txt",'utf8');
+// console.log(my_data);
+// // const data=my_data.toString();
+// // console.log(data);
+// fs.renameSync("bio.txt","mybio.txt");
+// fs.rmdirSync("thapa");
+// fs.unlinkSync("read.txt");
+// fs.rmdirSync("thapa");
+fs.mkdir("fsthapa");

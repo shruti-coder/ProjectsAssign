@@ -1,0 +1,7 @@
+Maven is a built open source tool 
+:It provide automation 
+: Project Structure
+:Packing
+:Dcoumentation
+:pom.xml-dependencies :3rd party application to install and updrage Lib/jar files
+plugin:Configuration file in which project will compile and run

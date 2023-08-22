@@ -1,0 +1,7 @@
+.mh-80 {
+  height: 80vh;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

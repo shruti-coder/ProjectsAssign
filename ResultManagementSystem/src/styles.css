@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.mh-80{
+    min-height: 80vh;
+}
+.bg-light-green {
+
+    background-color: #D5E8D4 !important;
+
+}
+.text-light-green {
+
+    color: #D5E8D4 !important;
+
+}
+.text-light-green1 {
+
+    color: #AFCFA0 !important;
+
+}
+.border-light-green {
+
+    border-color: #AFCFA0 !important;
+}
+
+.border-blue {
+  border-color: #4F82AC !important;
+}
+
+.bg-yellow {
+  background-color: #FFE6CC !important;
+}
+
+.border-yellow {
+  border-color: #D8BE62 !important;
+}
+
+.bg-white {
+ background-color: #F5F5F5 !important;
+}
+
+.border-white {
+  border-color: #E8E8E8 !important;
+
+}
+
+::-webkit-scrollbar{
+  display: none;
+}

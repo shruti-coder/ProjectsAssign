@@ -1,0 +1,67 @@
+<div class ="container-fluid" *ngIf="!toggle">
+  <div class="row py-3">
+   <div class="col-md-7 m-auto mh-80 d-flex align-items-center justify-content-center">
+     <form (submit)="search(searchForm)" #searchForm="ngForm" class="px-3 w-50 card py-3">
+        <label for="" class="fw-bold fs-5">Find Result</label>
+      <div class="form-group py-2">
+        <label for="rollNo" class="fs-6 p1">Roll No.</label>
+        <input required type="number" name="rollNo" min="1" #roll="ngModel" ngModel placeholder = " Enter your Roll no: "class="form-control">
+      </div>
+    <div class="form-group py-2">
+        <label for="date" class="fs-6 p1">Date Of Birth</label>
+        <input required type="date" name="dob" placeholder = " Enter your D.O.B." #date="ngModel" ngModel class="form-control">
+    </div>
+    <div class="row ">
+    <div class="col m-auto d-flex py-3 justify-content-evenly">
+     <button type="submit" class="btn-primary px-4 rounded-pill btn btn-md" >Search</button>
+      <button type = "reset" class="btn-secondary px-4 rounded-pill btn btn-md">Reset</button>
+   </div>
+    </div>
+  </form>
+ </div>
+</div>
+</div>
+
+<div class="container-fluid mh-80" *ngIf="toggle && studentRecord">
+  <div class="row">
+  
+    <div class="m-auto col-md-6" >
+      <nav class="fw-bolder py-2">Student Result</nav>
+      <div class="card">
+          <div class="card-body">
+              <form>
+              <div class="mb-3 row">
+                  <label for="RollNo" class="col-md-2 form-label">Roll No.</label>
+                  <div class="col-md-10">
+                    <input  type="number" class="form-control" id="inputRollNo." disabled [value]="studentRecord.id">
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label for="Name" class="col-md-2 form-label">Name</label>
+                  <div class="col-md-10">
+                    <input  type="text" class="form-control" id="inputName" disabled [value]="studentRecord.name" >
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label for="date" class="col-md-2 form-label">Date of Birth</label>
+                  <div class="col-md-10">
+                    <input  type="date" class="form-control" id="inputDate" disabled [value]="studentRecord.date" >
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label for="score" class="col-md-2 form-label">Score</label>
+                  <div class="col-md-10">
+                    <input  type="number" class="form-control" id="inputScore" disabled [value]="studentRecord.score" >
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <div class="col-md-7 m-auto">
+
+                    <button class="btn w-100 btn-primary"(click)="searchAnother()">Search Another Result</button>                </div>
+                  </div>
+              </form>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>

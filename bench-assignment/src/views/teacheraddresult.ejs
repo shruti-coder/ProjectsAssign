@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <%- include("./partials/header")-%>
+    <div class ="container-fluid">
+        <div class="row">
+          <a href="/resultmanage" class="p-3">Back</a>
+        </div>
+        <div class="row py-3">
+          <div class="col-md-7 m-auto mh-80 d-flex align-items-center justify-content-center">
+            <form action="/add" method="post"class="px-3 w-50 card py-3">
+                <label for="" class="fw-bold fs-5">Add Result</label>
+                <div class="form-group py-2">
+                    <label for="rollNo" class="fs-6 p1">Roll No.</label>
+                    <input required type="number" name="rollNo" min="1" placeholder = " Enter your Roll no: "class="form-control">
+                  </div>
+                  <div class="form-group py-2">
+                    <label for="Name" class="fs-6 p1">Name</label>
+                    <input required type="name" name="name" min="1" placeholder = " Enter your Name"class="form-control">
+                  </div>
+                <div class="form-group py-2">
+                    <label for="date" class="fs-6 p1">Date Of Birth</label>
+                    <input required type="date" name="dob" placeholder = " Enter your D.O.B." class="form-control">
+                </div>
+                <div class="form-group py-2">
+                  <label for="no:" class="fs-6 p1">Score</label>
+                  <input required type="number" name="score" min="1" placeholder = " Enter Marks"class="form-control">
+                </div>
+                <div class="row ">
+                  <div class="col m-auto d-flex py-3 justify-content-evenly">
+                    <button type="submit" class="btn-primary px-4 rounded-pill btn btn-md">Submit</button>
+                    <button type = "reset" class="btn-secondary px-4 rounded-pill btn btn-md">Reset</button>
+                  </div>
+                  </div>
+              </form>
+            </div>
+          </div>
+      </div>
+            
+</body>
+</html>

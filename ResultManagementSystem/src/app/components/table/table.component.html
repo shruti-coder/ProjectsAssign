@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 p-2 text-center "><label class="fw-bold fs-5">Total {{studentData.length}} Students</label></div>
+        <div class="col-md-3 ms-auto p-2 text-center ">
+            <button class="btn btn-primary px-3 btn-md "(click)='addStudent()'>Add Record</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 m-auto p-3 overflow-scroll">
+            <table class="table table-bordered border-dark text-nowrap">
+                <thead>
+                    <tr>
+                        <th>Roll No.</th>
+                        <th>Name</th>
+                        <th>Date of Birth</th>
+                        <th>Score</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of studentData">
+                        <td scope="row">{{item.id}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.date}}</td>
+                        <td>{{item.score}}</td>
+                        <td>
+                            <button class="btn  fs-5" (click)="editStudent(item.id)">🖊</button>&nbsp;
+                            <button class="btn  fs-5" (click)="deleteStudent(item.id)">🗑</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

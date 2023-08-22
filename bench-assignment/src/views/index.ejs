@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <%- include("./partials/header")-%>
+        <div class="container-fluid text-center d-flex align-items-center justify-content-center my-5 ">
+            <div class="h-100  w-50 text-center my-5">
+                <h5 class="text-center my-5 p-3 fw-bold">Login As</h5>
+                <div class="w-50 m-auto d-flex align-items-center flex-wrap justify-content-evenly">
+                    <a href="/login" class="btn m-1 btn-md py-2 fw-bold px-4 btn-primary my-2"
+                        name="teacherbtn">
+                        Teachers
+                    </a>
+                    <a href="/studentsearch" 
+                        class="btn m-1 btn-md py-2 fw-bold px-4 btn-primary" name="studentbtn">
+                        Students
+                    </a>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

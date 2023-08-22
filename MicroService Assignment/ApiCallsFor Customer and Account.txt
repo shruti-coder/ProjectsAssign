@@ -1,0 +1,68 @@
+Get All Customer with account details
+
+http://localhost:8081/customer
+[
+    {
+        "userid": 103,
+        "name": "Dharmik",
+        "phone": 1234567891,
+        "accounts": [
+            {
+                "accid": 153,
+                "accountNo": "abc456098982",
+                "amount": 5000.0,
+                "userId": 103
+            },
+            {
+                "accid": 154,
+                "accountNo": "abc456098981",
+                "amount": 5000.0,
+                "userId": 103
+            },
+            {
+                "accid": 155,
+                "accountNo": "abc456098980",
+                "amount": 5000.0,
+                "userId": 103
+            }
+        ]
+    },
+    {
+        "userid": 252,
+        "name": "Yash",
+        "phone": 98765,
+        "accounts": [
+            {
+                "accid": 252,
+                "accountNo": "hgfdsa1243",
+                "amount": 1000.0,
+                "userId": 252
+            }
+        ]
+    }
+]
+
+PutCustomer :      http://localhost:8081/customer/103
+
+GetSingleCustomer : http://localhost:8081/customer/103
+
+DeleteCustomer:     http://localhost:8081/customer/202
+
+PostCustomer:       http://localhost:8081/customer
+
+Account Apis
+
+GetAllAccounts :
+http://localhost:8080/account/customer
+
+Deposits:
+http://localhost:8080/account/customer/deposit
+
+withdrawal:
+http://localhost:8080/account/customer/withdrawal
+
+Delete
+http://localhost:8080/account/customer/252
+
+GetAccountByCustomerId
+http://localhost:8080/account/252

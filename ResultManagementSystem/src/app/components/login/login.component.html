@@ -1,0 +1,22 @@
+<div class="container mh-80 d-flex justify-content-center align-items-center">
+<div class="card " style="width: 22rem;">
+  <form (submit)="login(loginForm)" #loginForm="ngForm" >
+    <div class="card-header text-center">
+      Teacher Login
+    </div>
+    <div class="card-body">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" name="email" required #emailInput="ngModel"  ngModel class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Email">
+      </div>
+      <div *ngIf="emailInput.touched">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput2" class="form-label">Password</label>
+        <input type="password" name="password" ngModel class="form-control" id="exampleFormControlInput2" placeholder="Enter Your Password">
+      </div>
+      <button type="submit" class="btn btn-primary d-grid gap-2">Login</button>
+    </div>
+  </form>
+  </div>
+</div>

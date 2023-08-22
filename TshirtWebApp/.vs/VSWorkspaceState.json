@@ -1,0 +1,19 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\TshirtWebApp",
+    "\\TshirtWebApp\\src",
+    "\\TshirtWebApp\\src\\main",
+    "\\TshirtWebApp\\src\\main\\java",
+    "\\TshirtWebApp\\src\\main\\java\\com",
+    "\\TshirtWebApp\\src\\main\\java\\com\\training",
+    "\\TshirtWebApp\\src\\main\\java\\com\\training\\nagarro",
+    "\\TshirtWebApp\\src\\main\\java\\com\\training\\nagarro\\serviceimpl",
+    "\\TshirtWebApp\\src\\main\\resources",
+    "\\TshirtWebApp\\src\\main\\webapp",
+    "\\TshirtWebApp\\src\\main\\webapp\\WEB-INF",
+    "\\TshirtWebApp\\src\\main\\webapp\\WEB-INF\\view"
+  ],
+  "SelectedNode": "\\TshirtWebApp\\src\\main\\webapp\\WEB-INF\\web.xml",
+  "PreviewInSolutionExplorer": false
+}

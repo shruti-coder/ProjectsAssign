@@ -1,0 +1,55 @@
+pipeline{
+	agent any
+	tools{
+		maven "maven"
+	}
+	stages{
+		stage('Clean'){
+			steps{
+				bat 'mvn -f Devops/lms-rest/lms-rest/pom.xml clean'
+				echo 'Cleaning..'
+			}
+		}
+		stage('Compile'){
+			steps{
+				bat 'mvn -f Devops/lms-rest/lms-rest/pom.xml compile'
+				echo 'Compiling..'
+			}
+		}
+		stage('Test'){
+			steps{
+				bat 'mvn -f Devops/lms-rest/lms-rest/pom.xml test'
+				echo 'Testing..'
+			}
+		}
+		stage('Packaging'){
+			steps{
+				bat 'mvn -f Devops/lms-rest/lms-rest/pom.xml package'
+				echo 'Packaging..'
+			}
+		}
+		stage('Install'){
+			steps{
+				bat 'mvn -f Devops/lms-rest/lms-rest/pom.xml install'
+				echo 'Installing..'
+			}
+		}
+		stage('Docker image build'){
+			steps{
+				bat 'mvn -f Devops/lms-rest/lms-rest/pom.xml install'
+				echo 'Building..'
+			}
+		}
+		stage('push image to Docker Hub'){
+			steps{
+				bat 'mvn -f Devops/lms-rest/lms-rest/pom.xml install'
+				echo 'Pushing..'
+			}
+		}
+		
+	}
+}
+				
+		
+			
+		

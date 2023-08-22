@@ -1,0 +1,17 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Shruti",
+      "date": "2022-07-04",
+      "score": 99
+    }
+  ],
+  "teacher": [
+    {
+      "id": 1,
+      "email": "admin@gmail.com",
+      "password": "password"
+    }
+  ]
+}

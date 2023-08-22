@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+<body>
+    <%- include("./partials/header") -%>
+    <div class="container-fluid  mh-80">
+        <div class="row h-100">
+          <div class="col-md-7 m-auto d-flex justify-content-center align-items-center h-100">
+            <form action="/getLogin"class="myForm w-50 shadow p-4" method="post">
+              <h5 class="text-center">Teacher Login</h5>
+              <div class="form-group py-2 ">
+                <label for="email">Email</label>
+                <input
+                  class="form-control"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="form-group py-2">
+                <label for="password">Password</label>
+                <input
+                  class="form-control"
+                  type="password"
+                  name="password"
+                  placeholder="password"
+                />
+              </div>
+              <div class="form-group text-center p-2">
+                <button
+                  type="submit"
+                  name="submit"
+                  class="btn btn-primary"
+                  value="Login"
+                >Login</button>
+
+              </div>
+              <div >
+                Doesn't have an account?<a href="/signup">SignUp</a>
+              </div>
+              </form>
+        </div>
+      </div>
+      
+</body>
+
+</html>

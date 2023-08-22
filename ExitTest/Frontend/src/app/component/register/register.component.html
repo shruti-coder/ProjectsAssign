@@ -1,0 +1,108 @@
+<section class="register">
+  <div class="container">
+    <div class="row m-5 g-0">
+      <div class="col-md-5">
+        <img
+          src="https://img.freepik.com/free-vector/sign-up-concept-illustration_114360-7875.jpg?w=740&t=st=1659958376~exp=1659958976~hmac=2fcd78fec8d5dd29bd822a213fbcdaab478f7faa737f7724982389847e930db4"
+          class="img-fluid" alt="" />
+      </div>
+      <div class="col-md-7 px-5 pt-5">
+        <h1 class="fw-bolder py-1">Sign-Up</h1>
+        <h6 class=" py-1 ">Enter your details here</h6>
+        <form (submit)="signup(signupForm)" #signupForm="ngForm">
+          <div class="row">
+            <div class="col-md-12">
+              <input type="Email" name="email" class="form-control my-2 p-2" placeholder="Enter your Email-Address"
+                #emailInput="ngModel" ngModel email required [ngClass]="emailInput.invalid && (isSubmitted || emailInput.touched)
+                      ? 'border-danger'
+                      : emailInput.valid
+                      ? 'border-success'
+                      : ''
+                  " />
+              <div class="h-10">
+                <small *ngIf="
+                emailInput.invalid && (emailInput.touched || isSubmitted)
+              " class="text-danger">Invalid Email</small>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <input type="text" name="firstName" class="form-control my-2 p-2" placeholder="Enter your First Name"
+                pattern="^[a-zA-Z]{3,15}" #fnameInput="ngModel" [ngClass]="
+                    fnameInput.invalid && (isSubmitted || fnameInput.touched)
+                      ? 'border-danger'
+                      : fnameInput.valid
+                      ? 'border-success'
+                      : ''
+                  " ngModel required />
+              <div class="h-10">
+                <small *ngIf="
+                        fnameInput.invalid && (fnameInput.touched || isSubmitted)
+                      " class="text-danger">Invalid First Name</small>
+              </div>
+
+            </div>
+            <div class="col-md-6">
+              <input type="text" name="lastName" class="form-control my-2 p-2" placeholder="Enter your Last Name"
+                pattern="^[a-zA-Z]{3,15}" #lnameInput="ngModel" [ngClass]="
+                  lnameInput.invalid && (isSubmitted || lnameInput.touched)
+                    ? 'border-danger'
+                    : lnameInput.valid
+                    ? 'border-success'
+                    : ''
+                " ngModel required />
+              <div class="h-10">
+                <small *ngIf="
+                lnameInput.invalid && (lnameInput.touched || isSubmitted)
+              " class="text-danger">Invalid Last name</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <input type="password" name="password" class="form-control my-2 p-2" placeholder="Enter your password"
+                #passwordInput="ngModel" [ngClass]="
+                  passwordInput.invalid && (isSubmitted || passwordInput.touched)
+                    ? 'border-danger'
+                    : passwordInput.valid
+                    ? 'border-success'
+                    : ''
+                " ngModel required />
+              <div class="h-10">
+                <small *ngIf="
+                passwordInput.invalid && (passwordInput.touched || isSubmitted)
+              " class="text-danger">Invalid Password</small>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input type="password" name="cpassword" class="form-control my-2 p-2" placeholder="Confirm your password"
+                #cpasswordInput="ngModel" [ngClass]="
+                  cpasswordInput.invalid && (isSubmitted || cpasswordInput.touched)
+                    ? 'border-danger'
+                    : cpasswordInput.valid
+                    ? 'border-success'
+                    : ''
+                " ngModel required />
+              <div class="h-10">
+                <small *ngIf="
+                cpasswordInput.invalid && (cpasswordInput.touched || isSubmitted)
+              " class="text-danger">Invalid Confirm Password</small>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <button type="submit" class="btn btn-md btn2  my-3">Register</button>
+              </div>
+              <div>
+                <a href="">Forget password?</a>
+                <p>Have an account? <a routerLink="/login">Login Here</a></p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

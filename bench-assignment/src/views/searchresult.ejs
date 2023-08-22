@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include("./partials/header")-%>
+    <div class="container-fluid mh-80">
+        <div class="row">
+          <div class="m-auto col-md-6" >
+            <nav class="fw-bolder py-2">Student Result</nav>
+            <div class="card">
+                <div class="card-body">
+                  
+                    <form action="/result" method="post">
+                    <div class="mb-3 row">
+                        <label for="RollNo" class="col-md-2 form-label">Roll No.</label>
+                        <div class="col-md-10">
+                          <input  type="number" class="form-control" name="rollNo" disabled value="<%=result.rollNo%>">
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="Name" class="col-md-2 form-label">Name</label>
+                        <div class="col-md-10">
+                          <input  type="name" class="form-control" name="name" disabled value="<%=result.name%>" >
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="date" class="col-md-2 form-label">Date of Birth</label>
+                        <div class="col-md-10">
+                          <input  type="date" class="form-control" name="dob" disabled value="<%=result.dob?.toISOString()?.slice(0,10)%>" >
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="score" class="col-md-2 form-label">Score</label>
+                        <div class="col-md-10">
+                          <input  type="number" class="form-control" name="score" disabled value="<%=result.score%>" >
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <div class="col-md-7 m-auto">
+      
+                          <a href="/studentsearch" class="btn w-100 btn-primary">Search Another Result</a></div>
+                        </div>
+                    </form>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+</body>
+</html>

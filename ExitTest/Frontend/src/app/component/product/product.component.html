@@ -1,0 +1,78 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col px-3">
+      <a href="">Back</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10 m-auto py-3">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div
+              class="col-md-4 d-flex justify-content-center align-items-center"
+            >
+              <img
+                src={{products?.image}}
+                alt="Product Image"
+                class="image-responsive"
+                width="300px"
+                height="300px"
+              />
+            </div>
+            <div class="col-md-8 py-3">
+              <Strong class="fw-bolder fs-3">{{products?.title}}</Strong>
+              <ul class="list-unstyled">
+                <li class="fw-bold py-2">
+                  Vintage <span class="ps-1">{{products?.brand}}</span>
+                </li>
+                <li class="py-2">
+                  {{products?.descr}}
+                </li>
+                <li class="py-2">
+                  <strong class="fw-bolder fs-4">Rs.{{products?.price}}</strong>
+                  <small class="monospaced text-success"> In Stock</small>
+                </li>
+                <li>
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <form class="input-group w-75" (submit)="delivery(ship)" #ship="ngForm">
+                        <input
+                          class="form-control"
+                          type="number" name="pincode"
+                          placeholder="Enter Your Pincode"
+                          aria-label="Search" ngModel
+                        />
+                        <button
+                          class="input-group-append btn-dark btn"
+                          type="submit"
+                        >
+                          <i class="fa-regular fa-house-user"></i>
+                        </button>
+                      </form>
+                    </div>
+                    <div>
+                      <a class="monospaced" href="#" class=""
+                        >Add to WishList List</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li class="py-2">
+                  <button class="btn btn-success px-4">Buy Now</button>
+                </li>
+                <li class="py-2" style="height: 10px">
+                  <b
+                    *ngIf="isDeliverableMessage"
+                    class="text-center text-info"
+                    >{{ message }}</b
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

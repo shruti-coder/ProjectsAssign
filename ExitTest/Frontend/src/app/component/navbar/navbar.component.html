@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark main-menu">
+  <a class="navbar-brand p-1" href="#">
+    <h4 class="font-weight-bold">
+      <i class="fa-duotone fa-lg  fa-cart-shopping"></i>
+      Nagarro store
+    </h4>
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <form class="input-group p-2"  #form="ngForm" (submit)="searchF(form)">
+      <input
+        class="form-control"
+        type="search" name="search"
+        placeholder="Search for products..."
+        aria-label="Search" required ngModel #search="ngModel"
+      />
+      <button class="input-group-append btn-outline-light btn" type="submit">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+    <div class="d-flex justify-content-evenly align-items-center" style="width:400px">
+      <a *ngIf="!userIsAuth" routerLink = "/login" class="btn btn-outline-light">Login</a>
+      <a *ngIf="userIsAuth" (click)="onLogout()" class="btn btn-outline-light">Logout</a>
+      
+    </div>
+  </div>
+</nav>
